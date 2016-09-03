@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="persona1" class="com.mercurytfs.spring.colecciones.beans.Persona">
+        <property name="nombre" value="Persona1"/>
+        <property name="edad" value="26"/>
+    </bean>
+
+    <bean id="persona2" class="com.mercurytfs.spring.colecciones.beans.Persona">
+        <property name="nombre" value="Persona2"/>
+        <property name="edad" value="62"/>
+    </bean>
+
+    <bean id="manejador" class="com.mercurytfs.spring.colecciones.beans.ManejadorColecciones">
+
+        <property name="lista">
+            <list>
+                <ref bean="persona1"/>
+                <ref bean="persona2"/>
+                <value>Cadena</value>
+                <value type="java.lang.Integer">5</value>
+            </list>
+        </property>
+
+
+        <property name="arreglo">
+            <array>
+                <ref bean="persona2"/>
+                <ref bean="persona1"/>
+                <bean class="com.mercurytfs.spring.colecciones.beans.Persona">
+                    <property name="nombre" value="Persona Nueva"/>
+                    <property name="edad" value="10"/>
+                </bean>
+            </array>
+        </property>
+
+
+        <property name="conjunto">
+            <set>
+                <ref bean="persona1"/>
+                <ref bean="persona2"/>
+                <ref bean="persona2"/>
+                <ref bean="persona1"/>
+            </set>
+        </property>
+
+
+        <property name="mapa">
+            <map>
+                <entry key="persona1" value-ref="persona1"/>
+                <entry key-ref="persona2" value="otra persona"/>
+                <entry key="sin persona" value="no personas"/>
+                <entry key-ref="persona1" value-ref="persona2"/>
+                <entry>
+                    <key>
+                        <value type="int">2</value>
+                    </key>
+                    <value>2</value>
+                </entry>
+            </map>
+        </property>
+
+
+        <property name="propiedades">
+            <props>
+                <prop key="nombre">Alex</prop>
+                <prop key="pais">Mexico</prop>
+                <prop key="sitio">http://javatutoriales.blogspot.com/</prop>
+                <prop key="facebook">http://www.facebook.com/pages/Java-Tutoriales/121935157864634</prop>
+            </props>
+        </property>
+    </bean>
+</beans>

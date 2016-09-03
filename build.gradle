@@ -1,0 +1,19 @@
+group 'com.mercury-tfs'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.5
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.springframework', name: 'spring-context', version: '4.1.6.RELEASE'
+    compile group: 'org.springframework', name: 'spring-orm', version: '4.1.6.RELEASE'
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '4.1.4.Final'
+    compile group: 'org.xerial', name: 'sqlite-jdbc', version: '3.7.2'
+    compile group: 'com.enigmabridge', name: 'hibernate4-sqlite-dialect', version: '0.1.2'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}

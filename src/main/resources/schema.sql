@@ -1,0 +1,7 @@
+CREATE TABLE contacto (
+  ID bigint(20) NOT NULL PRIMARY KEY AUTOINCREMENT,
+  NOMBRE varchar(255) DEFAULT NULL,
+  email varchar(255) DEFAULT NULL,
+  telefono varchar(255) DEFAULT NULL,
+  PRIMARY KEY (ID)
+)

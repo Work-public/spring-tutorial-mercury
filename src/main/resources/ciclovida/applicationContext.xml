@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-init-method="inicializa"
+       default-destroy-method="destruye">
+    <bean id="estudiante" class="com.mercurytfs.spring.ciclovida.beans.Universitario"/>
+    <!--bean id="estudiante" class="com.mercurytfs.spring.ciclovida.beans.Universitario" init-method="afterPropertiesSet"
+          destroy-method="destroy"/-->
+    <bean id="sun" class="com.mercurytfs.spring.ciclovida.beans.Sun" factory-method="getInstancia"/>
+</beans>
